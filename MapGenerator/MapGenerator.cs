@@ -45,9 +45,9 @@ namespace MapGenerator
 			System.Drawing.Color seven = nullcolor;
 			System.Drawing.Color eight = nullcolor;
 
-			Bitmap image = new Bitmap(2049, 2049);
-			for(int i = 0 ; i < 2049 ; i++) {
-				for(int j = 0 ; j < 2049 ; j++) {
+			Bitmap image = new Bitmap(heightmap.GetLength(0), heightmap.GetLength(1));
+			for(int i = 0 ; i < heightmap.GetLength(0) ; i++) {
+				for(int j = 0 ; j < heightmap.GetLength(1) ; j++) {
 					if (heightmap[i, j] < 0.5) {
 						image.SetPixel(i, j, Color.FromArgb(0, 20, 185));
 						continue;
